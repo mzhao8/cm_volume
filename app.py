@@ -91,3 +91,5 @@ if st.button("RUN"):
 #df_final = pd.concat(df_list, ignore_index=True)
 
 #df_final.to_csv(f"{date_obj}_volume_candles_all.csv")
+
+#pip list --format=freeze > requirements.txt
