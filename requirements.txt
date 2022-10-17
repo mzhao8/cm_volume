@@ -45,7 +45,7 @@ msgpack==1.0.4
 multidict==6.0.2
 numpy==1.23.3
 orjson==3.8.0
-packaging==21.3
+packaging==20.4
 pandas==1.5.0
 parso==0.8.3
 pastel==0.2.1
