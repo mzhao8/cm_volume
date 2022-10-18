@@ -4,4 +4,4 @@ numpy
 plotly
 matplotlib
 requests
-coinmetrics
+coinmetrics-api-client
