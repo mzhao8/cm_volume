@@ -13,12 +13,12 @@ client = CoinMetricsClient(api_key)
 grayscale_tickers = [
     'aave', 'ada', 'algo', 'amp', 'atom', 'avax', 'bat', 'bch', 'btc', 'comp',
     'crv', 'dot', 'eth', 'etc', 'fil', 'link', 'lpt', 'ltc', 'mana', 'matic',
-    'mkr', 'sol', 'uni', 'xlm', 'yfi', 'zec', 'zen'
+    'mkr', 'sol', 'snx', 'uni', 'xlm', 'yfi', 'zec', 'zen', 'ldo'
 ]
 
-trading_pairs = ['usd', 'usdt', 'usdc', 'dai']
+trading_pairs = ['usd', 'usdt', 'usdc', 'dai', 'tusd']
 
-exchanges = ['*', 'binance', 'coinbase']
+exchanges = ['*', 'binance', 'coinbase', 'crypto.com']
 
 #streamlit run main.py
 st.title('grayscale volume automator')
@@ -40,6 +40,9 @@ exchanges_list = st.multiselect(
 start_time = str(st.date_input("Start Date", date(date.today().year, 1, 1)))
 # end time
 end_time = str(st.date_input("End Date", date.today() - timedelta(days=1)))
+st.text(
+    'keep in mind to add a day to the end date. for example, if you are finding data from 1/1/23 - 6/30/23, the end date should be 7/1/23'
+)
 # frequency
 
 csv = None
@@ -53,7 +56,8 @@ def run_automator(options_list: list, start_time: str, end_time: str) -> csv:
                 try:
                     # logging
                     st.write(
-                        f"getting {trading_pair} volume data for {asset} on {exchange}...")
+                        f"getting {trading_pair} volume data for {asset} on {exchange}..."
+                    )
 
                     # getting candles
                     candles_all = client.get_market_candles(
@@ -74,6 +78,8 @@ def run_automator(options_list: list, start_time: str, end_time: str) -> csv:
                         lambda x: x.split("-")[0])
                     candles_all["asset"] = candles_all.market.apply(
                         lambda x: x.split("-")[1])
+                    candles_all["base_pair"] = candles_all.market.apply(
+                        lambda x: x.split("-")[2])
                     print(candles_all.head())
                     df_list.append(candles_all)
                 except:
