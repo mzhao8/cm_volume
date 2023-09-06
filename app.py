@@ -1,7 +1,7 @@
 import os
 import streamlit as st
 
-api_key = os.environ["CM_KEY"]
+api_key = st.secrets['CM_KEY']  #os.environ["CM_KEY"]
 
 import pandas as pd
 from coinmetrics.api_client import CoinMetricsClient
