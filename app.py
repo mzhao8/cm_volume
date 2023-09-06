@@ -94,7 +94,7 @@ def run_automator(options_list: list, start_time: str, end_time: str) -> csv:
     df2 = df2.groupby('market').sum()
     #df2_csv = df2.to_csv().encode('utf-8')
 
-    st.dataframe(df2)
+    #st.dataframe(df2)
 
     return df_final, df2
 
