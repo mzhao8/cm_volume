@@ -18,7 +18,7 @@ grayscale_tickers = [
 
 trading_pairs = ['usd', 'usdt', 'usdc', 'dai', 'tusd']
 
-exchanges = ['*', 'binance', 'coinbase', 'crypto.com']
+exchanges = ['*', 'binance', 'coinbase', 'kraken', 'lmax', 'crypto.com']
 
 #streamlit run main.py
 st.title('grayscale volume automator')
