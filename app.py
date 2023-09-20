@@ -13,12 +13,12 @@ client = CoinMetricsClient(api_key)
 grayscale_tickers = [
     'aave', 'ada', 'algo', 'amp', 'atom', 'avax', 'bat', 'bch', 'btc', 'comp',
     'crv', 'dot', 'eth', 'etc', 'fil', 'link', 'lpt', 'ltc', 'mana', 'matic',
-    'mkr', 'sol', 'snx', 'uni', 'xlm', 'yfi', 'zec', 'zen', 'ldo'
+    'mkr', 'sol', 'snx', 'uni', 'xlm', 'yfi', 'zec', 'zen', 'ldo', 'osmo', 'near'
 ]
 
 trading_pairs = ['usd', 'usdt', 'usdc', 'dai', 'tusd']
 
-exchanges = ['*', 'binance', 'coinbase', 'kraken', 'lmax', 'crypto.com']
+exchanges = ['*', 'binance', 'coinbase', 'kraken', 'lmax', 'crypto.com', ]
 
 #streamlit run main.py
 st.title('grayscale volume automator')
