@@ -14,7 +14,7 @@ grayscale_tickers = [
     'aave', 'ada', 'algo', 'amp', 'atom', 'avax', 'bat', 'bch', 'btc', 'comp',
     'crv', 'dot', 'eth', 'etc', 'fil', 'link', 'lpt', 'ltc', 'mana', 'matic',
     'mkr', 'sol', 'snx', 'uni', 'xlm', 'yfi', 'zec', 'zen', 'ldo', 'osmo',
-    'near', 'apt', 'usdt'
+    'near', 'apt', 'usdt', 'xrp'
 ]
 
 trading_pairs = ['usd', 'usdt', 'usdc', 'dai', 'tusd']
